@@ -37,8 +37,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = { :type => "MIT" }
-
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -62,8 +61,8 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
-
+  spec.platform     = :ios, "11.0"
+  spec.swift_version = "5.0"
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
@@ -88,8 +87,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{swift}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "PBUtils/PBUtils/**/*.{swift}"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -103,7 +101,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-   spec.resources = "Resources/*.png"
+  # spec.resources = "PBUtils/**/*.png"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
