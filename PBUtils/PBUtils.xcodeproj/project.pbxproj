@@ -96,7 +96,7 @@
 		8BD373C92440F4D400404989 /* PBUtils */ = {
 			isa = PBXGroup;
 			children = (
-				8BD373F92440F55600404989 /* Utils */,
+				8BD3741A2440F9F600404989 /* Classes */,
 				8BD373CA2440F4D400404989 /* PBUtils.h */,
 				8BD373CB2440F4D400404989 /* Info.plist */,
 			);
@@ -132,6 +132,14 @@
 				8BD373FA2440F55600404989 /* LocalFiles+Utils.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		8BD3741A2440F9F600404989 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8BD373F92440F55600404989 /* Utils */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
