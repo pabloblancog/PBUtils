@@ -1,0 +1,6 @@
+framework module Pods_PBUtils {
+  umbrella header "Pods-PBUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}

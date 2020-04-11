@@ -1,9 +1,9 @@
 //
 //  LocalFiles+Utils.swift
-//  PBUtils
+//  helpandsupport
 //
-//  Created by Pablo Blanco González on 11/04/2020.
-//  Copyright © 2020 PabloBlanco. All rights reserved.
+//  Created by Pablo Blanco González on 02/10/2019.
+//  Copyright © 2019 Globile. All rights reserved.
 //
 
 import Foundation

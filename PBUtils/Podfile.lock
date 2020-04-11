@@ -1,0 +1,16 @@
+PODS:
+  - PBUtils (0.0.2)
+
+DEPENDENCIES:
+  - PBUtils
+
+SPEC REPOS:
+  trunk:
+    - PBUtils
+
+SPEC CHECKSUMS:
+  PBUtils: b866b1fbe9e2ecf4889da6d5034414bd1336311f
+
+PODFILE CHECKSUM: baa4ffa40f4e31789d3cedf7c4d91d2b02bb2f04
+
+COCOAPODS: 1.9.1
