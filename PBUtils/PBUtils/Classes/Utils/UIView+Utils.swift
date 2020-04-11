@@ -103,7 +103,7 @@ extension UIView {
     
     public func addBackground(color: UIColor) {
         backgroundColor = color
-        addShadow(color: .black)
+        addShadow(.black)
     }
     
     public func setCorners(cornerRadius: CGFloat = 0.0, corners: CACornerMask? = nil) {
