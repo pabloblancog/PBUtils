@@ -37,7 +37,7 @@ public extension UIView {
 
 extension UIView {
     
-    struct Margins {
+    public struct Margins {
         var top: CGFloat
         var leading: CGFloat
         var bottom: CGFloat
@@ -47,7 +47,7 @@ extension UIView {
     static let zeroMargins = Margins(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0)
 
     public func addSubview(_ viewToAdd: UIView,
-                    margins: Margins = zeroMargins) {
+                    margins: Margins) {
         self.addSubview(viewToAdd,
                         topSpacing: margins.top,
                         leadingSpacing: margins.leading,
