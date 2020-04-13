@@ -29,7 +29,6 @@
 		8BD3746C2441CAE800404989 /* Date+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD374622441CAE800404989 /* Date+Utils.swift */; };
 		8BD3746D2441CAE800404989 /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD374632441CAE800404989 /* ReusableViewProtocol.swift */; };
 		8BD374712441CC3400404989 /* NibFileOwnerLoadableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD374702441CC3400404989 /* NibFileOwnerLoadableProtocol.swift */; };
-		8BD374732441D0BB00404989 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD374722441D0BB00404989 /* TimelineView.swift */; };
 		8BD374752441D2AC00404989 /* TimelineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BD374742441D2AC00404989 /* TimelineView.xib */; };
 		8DB9B1BDE2CA804FA87B0E60 /* Pods_PBUtils_PBUtilsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A95C9E3B034C865877BCFF /* Pods_PBUtils_PBUtilsTests.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +74,6 @@
 		8BD374622441CAE800404989 /* Date+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utils.swift"; sourceTree = "<group>"; };
 		8BD374632441CAE800404989 /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		8BD374702441CC3400404989 /* NibFileOwnerLoadableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibFileOwnerLoadableProtocol.swift; sourceTree = "<group>"; };
-		8BD374722441D0BB00404989 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		8BD374742441D2AC00404989 /* TimelineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineView.xib; sourceTree = "<group>"; };
 		C14D263652910A5318612963 /* Pods_PBUtilsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBUtilsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FA9DDFDAE1CA6B12CC33EC /* Pods-PBUtils-PBUtilsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBUtils-PBUtilsTests.release.xcconfig"; path = "Target Support Files/Pods-PBUtils-PBUtilsTests/Pods-PBUtils-PBUtilsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				8BD373F02440F51500404989 /* Assets.xcassets */,
 				8BD373F22440F51500404989 /* LaunchScreen.storyboard */,
 				8BD373F52440F51500404989 /* Info.plist */,
-				8BD374722441D0BB00404989 /* TimelineView.swift */,
 				8BD374742441D2AC00404989 /* TimelineView.xib */,
 			);
 			path = PBUtilsExample;
@@ -215,7 +212,6 @@
 				4C3EFF2882ECF0F0464BF20B /* Pods-PBUtilsExample.debug.xcconfig */,
 				0CFC8B7D4B707D6DF224AE10 /* Pods-PBUtilsExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -279,7 +275,7 @@
 				8BD373E12440F51400404989 /* Sources */,
 				8BD373E22440F51400404989 /* Frameworks */,
 				8BD373E32440F51400404989 /* Resources */,
-				412894CF04A6975496E840D9 /* [CP] Embed Pods Frameworks */,
+				85F3F72239C9DB3FA08851A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,7 +422,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		412894CF04A6975496E840D9 /* [CP] Embed Pods Frameworks */ = {
+		85F3F72239C9DB3FA08851A3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -477,7 +473,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD374732441D0BB00404989 /* TimelineView.swift in Sources */,
 				8BD373EC2440F51400404989 /* ViewController.swift in Sources */,
 				8BD373E82440F51400404989 /* AppDelegate.swift in Sources */,
 			);

@@ -1,16 +1,16 @@
 PODS:
-  - PBUtils (0.0.2)
+  - PBUtils (0.0.4)
 
 DEPENDENCIES:
-  - PBUtils
+  - PBUtils (from `../.`)
 
-SPEC REPOS:
-  trunk:
-    - PBUtils
+EXTERNAL SOURCES:
+  PBUtils:
+    :path: "../."
 
 SPEC CHECKSUMS:
-  PBUtils: b866b1fbe9e2ecf4889da6d5034414bd1336311f
+  PBUtils: 7a0b6a7c957de6dbe0366c87dc9b02a62347217b
 
-PODFILE CHECKSUM: baa4ffa40f4e31789d3cedf7c4d91d2b02bb2f04
+PODFILE CHECKSUM: 6fa710a81a24dd726484818698142a117fb451e0
 
 COCOAPODS: 1.9.1

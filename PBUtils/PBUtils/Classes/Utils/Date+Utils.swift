@@ -9,7 +9,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     
     enum Format: String {
         case defaultDate = "HH:mm dd/MM/yyyy"

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIStackView {
+public extension UIStackView {
     
     @discardableResult
     func addView(_ view: UIView, height: CGFloat, width: CGFloat) -> (widthConstraint: NSLayoutConstraint, heightConstraint: NSLayoutConstraint) {
