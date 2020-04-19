@@ -18,8 +18,11 @@ public extension ReusableViewProtocol where Self: UIView {
     }
 }
 
-extension UICollectionViewCell: ReusableViewProtocol { }
+public extension ReusableViewProtocol where Self: UIViewController {
+    static var defaultReuseIdentifier: String {
+        return String(describing: self)
+    }
+}
 
-extension UITableViewCell: ReusableViewProtocol { }
-
-extension UITableViewHeaderFooterView: ReusableViewProtocol { }
+extension UIView: ReusableViewProtocol {}
+extension UIViewController: ReusableViewProtocol {}

@@ -18,6 +18,7 @@ public extension Date {
         case literalDate = "EEEE, dd MMM yyyy"
         case weekday = "EEE"
         case day = "dd"
+        case iso8601 = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
     }
 
     var dateComponents: DateComponents {
@@ -74,5 +75,14 @@ public extension Date {
 
     func addingDays(days: Int) -> Date? {
         return addingHours(hours: 24*days)
+    }
+    
+    var dateISO8601Full: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = Format.iso8601.rawValue
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        return formatter.string(from: self)
     }
 }

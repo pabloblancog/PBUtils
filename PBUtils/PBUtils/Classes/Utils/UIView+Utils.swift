@@ -25,7 +25,7 @@ public extension UIView {
         let intersectionFrame = inView.bounds.intersection(self.frame)
         return intersectionFrame.equalTo(self.frame)
     }
-
+    
     func addShadow(color: UIColor = .black, shadowOpacity: Float = 0.05) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0)
@@ -45,7 +45,7 @@ public extension UIView {
     }
     
     static let zeroMargins = Margins(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0)
-
+    
     func addSubview(_ viewToAdd: UIView,
                     margins: Margins) {
         self.addSubview(viewToAdd,
@@ -65,20 +65,16 @@ public extension UIView {
         addSubview(viewToAdd)
         viewToAdd.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            viewToAdd.topAnchor.constraint(equalTo: topAnchor,
-                                           constant: topSpacing),
-            viewToAdd.leadingAnchor.constraint(equalTo: leadingAnchor,
-                                               constant: leadingSpacing),
-            viewToAdd.trailingAnchor.constraint(equalTo: trailingAnchor,
-                                                constant: -trailingSpacing),
-            viewToAdd.bottomAnchor.constraint(equalTo: bottomAnchor,
-                                              constant: -bottomSpacing)
+            viewToAdd.topAnchor.constraint(equalTo: topAnchor, constant: topSpacing),
+            viewToAdd.leadingAnchor.constraint(equalTo: leadingAnchor, constant: leadingSpacing),
+            viewToAdd.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -trailingSpacing),
+            viewToAdd.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomSpacing)
         ])
     }
     
     func addSubview(_ viewToAdd: UIView,
-                           width: CGFloat,
-                           height: CGFloat) {
+                    width: CGFloat,
+                    height: CGFloat) {
         
         addSubview(viewToAdd)
         viewToAdd.translatesAutoresizingMaskIntoConstraints = false
