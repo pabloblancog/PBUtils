@@ -5,7 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'PBUtils' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  #use_frameworks!
 
   # Pods for PBUtils
 
@@ -17,7 +17,7 @@ end
 
 target 'PBUtilsExample' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  #use_frameworks!
 
   # Pods for PBUtilsExample
   pod 'PBUtils', :path => '../.'

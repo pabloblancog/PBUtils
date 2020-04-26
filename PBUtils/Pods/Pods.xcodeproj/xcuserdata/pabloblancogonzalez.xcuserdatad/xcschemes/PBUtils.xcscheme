@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0DB0C3E623FE0E5482A6BF1ECA169237"
-               BuildableName = "PBUtils.framework"
+               BuildableName = "libPBUtils.a"
                BlueprintName = "PBUtils"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

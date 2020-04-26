@@ -1,4 +1,4 @@
-framework module PBUtils {
+module PBUtils {
   umbrella header "PBUtils-umbrella.h"
 
   export *

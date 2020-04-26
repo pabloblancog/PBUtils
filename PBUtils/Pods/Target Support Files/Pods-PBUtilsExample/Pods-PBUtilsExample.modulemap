@@ -1,4 +1,4 @@
-framework module Pods_PBUtilsExample {
+module Pods_PBUtilsExample {
   umbrella header "Pods-PBUtilsExample-umbrella.h"
 
   export *

@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let array = ["1", "2", "3"]
+        print(array[safe: 0])
     }
 }
 

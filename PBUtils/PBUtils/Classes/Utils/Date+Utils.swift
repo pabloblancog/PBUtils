@@ -111,10 +111,8 @@ public extension Date {
     var isToday: Bool {
         return isSameDay(than: Date())
     }
-}
 
-extension Date {
-    public func next(_ weekday: Weekday, direction: Calendar.SearchDirection = .forward, considerToday: Bool = false) -> Date {
+    func next(_ weekday: Weekday, direction: Calendar.SearchDirection = .forward, considerToday: Bool = false) -> Date {
         let calendar = Calendar(identifier: .gregorian)
         let components = DateComponents(weekday: weekday.rawValue)
 
@@ -128,7 +126,7 @@ extension Date {
                                  direction: direction)!
     }
 
-    public enum Weekday: Int {
+    enum Weekday: Int {
         case sunday = 1, monday, tuesday, wednesday, thursday, friday, saturday
     }
 }
