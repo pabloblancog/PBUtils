@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "PBUtils"
-  spec.version      = "0.0.4"
+  spec.version      = "0.0.5"
   spec.summary      = "Swift utilities"
   spec.description  = "Swift utilities for your project"
   spec.homepage     = "https://github.com/pabloblancog/PBUtils"
