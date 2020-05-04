@@ -27,6 +27,7 @@ public extension Date {
         case weekdaySymbol = "EEEEE"
         case day = "dd"
         case iso8601 = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        case shortDate = "yyyy-MM-dd"
     }
 
     var dateComponents: DateComponents {
@@ -81,17 +82,21 @@ public extension Date {
     func isSameDay(than date: Date) -> Bool {
         return Calendar.current.isDate(self, inSameDayAs: date)
     }
-    
-    func addingHours(hours: Int) throws -> Date {
+
+    func addingMinutes(minutes: Int) throws -> Date {
         let calendar = Calendar.current
-        guard let date = calendar.date(byAdding: .hour, value: hours, to: self) else {
+        guard let date = calendar.date(byAdding: .minute, value: minutes, to: self) else {
             throw NSError(domain: "", code: 1, userInfo: nil)
         }
         return date
     }
+    
+    func addingHours(hours: Int) throws -> Date {
+        return try addingMinutes(minutes: 60 * hours)
+    }
 
     func addingDays(days: Int) throws -> Date {
-        return try addingHours(hours: 24*days)
+        return try addingHours(hours: 24 * days)
     }
     
     var dateISO8601Full: String {
@@ -103,9 +108,37 @@ public extension Date {
         return formatter.string(from: self)
     }
     
+    var dateISO8601FullEscaped: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = Format.iso8601.rawValue
+        formatter.calendar = Calendar(identifier: .iso8601)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        let formattedString = formatter.string(from: self)
+        return formattedString.replacingOccurrences(of: ":", with: "%3A")
+    }
+    
+    var dateShortString: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = Format.shortDate.rawValue
+        return formatter.string(from: self)
+    }
+    
     func isToday(_ weekday: Weekday) -> Bool {
         let calendar = Calendar.current
         return calendar.component(.weekday, from: self) == weekday.rawValue
+    }
+    
+    func tomorrow() throws -> Date? {
+        return try self.addingDays(days: 1)
+    }
+    
+    func yesterday() throws -> Date? {
+        return try self.addingDays(days: -1)
+    }
+    
+    func nextSameDay() throws -> Date? {
+        return try self.addingDays(days: 7)
     }
     
     var isToday: Bool {
