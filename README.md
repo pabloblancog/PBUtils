@@ -72,7 +72,7 @@ This repository includes a toolset of helper methods to include on your project.
 ### Array 
 *Array utilities for safer access to value*
 
-[Get safe access to array index by overriding subscript](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/Foundation%2BUtils/Array%2BUtils.swift#L13): Overwrites subscript to get safe access to an array index
+[Get safe access to array index by overriding subscript](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/Foundation%2BUtils/Array%2BUtils.swift#L13)
 
 ### Date
 *Date formatter methods and utilities*
