@@ -6,7 +6,7 @@
 //  Copyright © 2020 PabloBlanco. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UICollectionView {
     func register(cellIdentifier: String) {

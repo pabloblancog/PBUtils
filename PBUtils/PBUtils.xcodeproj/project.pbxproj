@@ -23,7 +23,7 @@
 		8BD373F42440F51500404989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD373F22440F51500404989 /* LaunchScreen.storyboard */; };
 		8BD3740A2440F55600404989 /* LocalFiles+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD373FA2440F55600404989 /* LocalFiles+Utils.swift */; };
 		8BD374652441CAE800404989 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3745B2441CAE800404989 /* UIView+Utils.swift */; };
-		8BD374662441CAE800404989 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3745C2441CAE800404989 /* Colors.swift */; };
+		8BD374662441CAE800404989 /* UIColor+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3745C2441CAE800404989 /* UIColor+Init.swift */; };
 		8BD374672441CAE800404989 /* UINib+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3745D2441CAE800404989 /* UINib+Utils.swift */; };
 		8BD374682441CAE800404989 /* UIKeyboard+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3745E2441CAE800404989 /* UIKeyboard+Utils.swift */; };
 		8BD374692441CAE800404989 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3745F2441CAE800404989 /* UIViewController+Utils.swift */; };
@@ -71,7 +71,7 @@
 		8BD373F52440F51500404989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD373FA2440F55600404989 /* LocalFiles+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocalFiles+Utils.swift"; sourceTree = "<group>"; };
 		8BD3745B2441CAE800404989 /* UIView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
-		8BD3745C2441CAE800404989 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8BD3745C2441CAE800404989 /* UIColor+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Init.swift"; sourceTree = "<group>"; };
 		8BD3745D2441CAE800404989 /* UINib+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+Utils.swift"; sourceTree = "<group>"; };
 		8BD3745E2441CAE800404989 /* UIKeyboard+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKeyboard+Utils.swift"; sourceTree = "<group>"; };
 		8BD3745F2441CAE800404989 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
@@ -124,6 +124,34 @@
 				02449BE116BD65B96E4FB7E4 /* libPods-PBUtils-PBUtilsTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B6E929E248F73CF004AB839 /* UIKit+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8BD3745C2441CAE800404989 /* UIColor+Init.swift */,
+				8BD374632441CAE800404989 /* ReusableViewProtocol.swift */,
+				8BD374602441CAE800404989 /* UITableView+Utils.swift */,
+				8B359929244F70B900B3AA12 /* UICollectionView+Utils.swift */,
+				8BD3745E2441CAE800404989 /* UIKeyboard+Utils.swift */,
+				8BD3745D2441CAE800404989 /* UINib+Utils.swift */,
+				8BD374612441CAE800404989 /* UIStackView+Utils.swift */,
+				8BD3745B2441CAE800404989 /* UIView+Utils.swift */,
+				8BD3745F2441CAE800404989 /* UIViewController+Utils.swift */,
+				8BD374702441CC3400404989 /* NibFileOwnerLoadableProtocol.swift */,
+			);
+			path = "UIKit+Utils";
+			sourceTree = "<group>";
+		};
+		8B6E929F248F73E3004AB839 /* Foundation+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8B358F4E244CA76500B3AA12 /* String+Utils.swift */,
+				8BD374622441CAE800404989 /* Date+Utils.swift */,
+				8BD373FA2440F55600404989 /* LocalFiles+Utils.swift */,
+				8B358F50244CA95500B3AA12 /* Array+Utils.swift */,
+			);
+			path = "Foundation+Utils";
 			sourceTree = "<group>";
 		};
 		8BD373BD2440F4D400404989 = {
@@ -182,31 +210,11 @@
 			path = PBUtilsExample;
 			sourceTree = "<group>";
 		};
-		8BD373F92440F55600404989 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				8BD3745C2441CAE800404989 /* Colors.swift */,
-				8BD374622441CAE800404989 /* Date+Utils.swift */,
-				8BD374632441CAE800404989 /* ReusableViewProtocol.swift */,
-				8BD374602441CAE800404989 /* UITableView+Utils.swift */,
-				8BD3745E2441CAE800404989 /* UIKeyboard+Utils.swift */,
-				8BD3745D2441CAE800404989 /* UINib+Utils.swift */,
-				8BD374612441CAE800404989 /* UIStackView+Utils.swift */,
-				8BD3745B2441CAE800404989 /* UIView+Utils.swift */,
-				8BD3745F2441CAE800404989 /* UIViewController+Utils.swift */,
-				8BD373FA2440F55600404989 /* LocalFiles+Utils.swift */,
-				8BD374702441CC3400404989 /* NibFileOwnerLoadableProtocol.swift */,
-				8B358F4E244CA76500B3AA12 /* String+Utils.swift */,
-				8B358F50244CA95500B3AA12 /* Array+Utils.swift */,
-				8B359929244F70B900B3AA12 /* UICollectionView+Utils.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		8BD3741A2440F9F600404989 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8BD373F92440F55600404989 /* Utils */,
+				8B6E929F248F73E3004AB839 /* Foundation+Utils */,
+				8B6E929E248F73CF004AB839 /* UIKit+Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -444,7 +452,7 @@
 				8BD374692441CAE800404989 /* UIViewController+Utils.swift in Sources */,
 				8B358F4F244CA76500B3AA12 /* String+Utils.swift in Sources */,
 				8B358F51244CA95500B3AA12 /* Array+Utils.swift in Sources */,
-				8BD374662441CAE800404989 /* Colors.swift in Sources */,
+				8BD374662441CAE800404989 /* UIColor+Init.swift in Sources */,
 				8BD3746C2441CAE800404989 /* Date+Utils.swift in Sources */,
 				8BD374652441CAE800404989 /* UIView+Utils.swift in Sources */,
 				8BD3740A2440F55600404989 /* LocalFiles+Utils.swift in Sources */,

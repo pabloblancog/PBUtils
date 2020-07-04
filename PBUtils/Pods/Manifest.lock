@@ -1,5 +1,5 @@
 PODS:
-  - PBUtils (0.0.5)
+  - PBUtils (0.0.6)
 
 DEPENDENCIES:
   - PBUtils (from `../.`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../."
 
 SPEC CHECKSUMS:
-  PBUtils: 2c20afcdbbbb3db6b478747f753bdd27dd596138
+  PBUtils: 22cb3da94332d581c1a92ec8843107d0e75330da
 
 PODFILE CHECKSUM: 1a41e2d5aaef50644bb9dabb51859391d60ef30f
 

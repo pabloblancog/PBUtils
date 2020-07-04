@@ -11,6 +11,9 @@ import Foundation
 
 public extension Date {
     
+    static let dateFormatter = DateFormatter()
+    static let calendar = Calendar.current
+    
     /*
     E..EEE  Tue Abbreviated Day of week name, format style.
     EEEE    Tuesday Wide
@@ -20,8 +23,9 @@ public extension Date {
     
     enum Format: String {
         case defaultDate = "HH:mm dd/MM/yyyy"
-        case time = "hh:mm"
-        case timeAMPM = "hh:mm a"
+        case detailedTime = "HH:mm:ss"
+        case time = "HH:mm"
+        case timeAMPM = "HH:mm a"
         case literalDate = "EEEE, dd MMM yyyy"
         case weekday = "EEE"
         case weekdaySymbol = "EEEEE"
@@ -31,7 +35,8 @@ public extension Date {
     }
 
     var dateComponents: DateComponents {
-        return Calendar.current.dateComponents([.day, .month, .year], from: self)
+        let calendar = Date.calendar
+        return calendar.dateComponents([.day, .month, .year], from: self)
     }
     
     var dateHashString: String? {
@@ -41,50 +46,57 @@ public extension Date {
         return "\(year)\(month)\(day)"
     }
     
+    var detailedTimeString: String {
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.detailedTime.rawValue
+        return dateFormatter.string(from: self)
+    }
+    
     var timeString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.time.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.time.rawValue
+        return dateFormatter.string(from: self)
     }
 
     var timeAMPMString: String {
-        let formatter = DateFormatter()
-        formatter.amSymbol = "AM"
-        formatter.pmSymbol = "PM"
-        formatter.dateFormat = Format.timeAMPM.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
+        dateFormatter.dateFormat = Format.timeAMPM.rawValue
+        return dateFormatter.string(from: self)
     }
     
     var dateString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.literalDate.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.literalDate.rawValue
+        return dateFormatter.string(from: self)
     }
     
     var weekdayString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.weekday.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.weekday.rawValue
+        return dateFormatter.string(from: self)
     }
     
     var dayString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.day.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.day.rawValue
+        return dateFormatter.string(from: self)
     }
 
     var daySymbolString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.weekdaySymbol.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.weekdaySymbol.rawValue
+        return dateFormatter.string(from: self)
     }
     
     func isSameDay(than date: Date) -> Bool {
-        return Calendar.current.isDate(self, inSameDayAs: date)
+        let calendar = Date.calendar
+        return calendar.isDate(self, inSameDayAs: date)
     }
 
     func addingMinutes(minutes: Int) throws -> Date {
-        let calendar = Calendar.current
+        let calendar = Date.calendar
         guard let date = calendar.date(byAdding: .minute, value: minutes, to: self) else {
             throw NSError(domain: "", code: 1, userInfo: nil)
         }
@@ -100,32 +112,32 @@ public extension Date {
     }
     
     var dateISO8601Full: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.iso8601.rawValue
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.iso8601.rawValue
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        return dateFormatter.string(from: self)
     }
     
     var dateISO8601FullEscaped: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.iso8601.rawValue
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        let formattedString = formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.iso8601.rawValue
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        let formattedString = dateFormatter.string(from: self)
         return formattedString.replacingOccurrences(of: ":", with: "%3A")
     }
     
     var dateShortString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Format.shortDate.rawValue
-        return formatter.string(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Format.shortDate.rawValue
+        return dateFormatter.string(from: self)
     }
     
     func isToday(_ weekday: Weekday) -> Bool {
-        let calendar = Calendar.current
+        let calendar = Date.calendar
         return calendar.component(.weekday, from: self) == weekday.rawValue
     }
     
@@ -146,7 +158,7 @@ public extension Date {
     }
 
     func next(_ weekday: Weekday, direction: Calendar.SearchDirection = .forward, considerToday: Bool = false) -> Date {
-        let calendar = Calendar(identifier: .gregorian)
+        let calendar = Date.calendar
         let components = DateComponents(weekday: weekday.rawValue)
 
         if considerToday && calendar.component(.weekday, from: self) == weekday.rawValue {

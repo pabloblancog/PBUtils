@@ -26,7 +26,7 @@ public extension UIView {
         return intersectionFrame.equalTo(self.frame)
     }
     
-    func addShadow(color: UIColor = .black, shadowOpacity: Float = 0.05) {
+    func addShadow(color: UIColor = .black, shadowOpacity: Float = 0.25) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 0)
         layer.shadowRadius = 5

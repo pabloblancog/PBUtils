@@ -10,19 +10,21 @@ import Foundation
 
 public extension String {
     
+    static let dateFormatter = DateFormatter()
+
     func toDate(format: Date.Format = .defaultDate) -> Date? {
-        let dateFormatter = DateFormatter()
+        let dateFormatter = Date.dateFormatter
         dateFormatter.dateFormat = format.rawValue
         return dateFormatter.date(from: self)
     }
     
     func toDateISO8601Full() -> Date? {
-        let formatter = DateFormatter()
-        formatter.dateFormat = Date.Format.iso8601.rawValue
-        formatter.calendar = Calendar(identifier: .iso8601)
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        return formatter.date(from: self)
+        let dateFormatter = Date.dateFormatter
+        dateFormatter.dateFormat = Date.Format.iso8601.rawValue
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        return dateFormatter.date(from: self)
     }
     
     func isValidEmail() -> Bool {
