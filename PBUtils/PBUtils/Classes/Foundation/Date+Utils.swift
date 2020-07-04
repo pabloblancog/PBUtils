@@ -89,6 +89,10 @@ public extension Date {
         dateFormatter.dateFormat = Format.weekdaySymbol.rawValue
         return dateFormatter.string(from: self)
     }
+}
+
+// Day checks
+extension Date {
     
     func isSameDay(than date: Date) -> Bool {
         let calendar = Date.calendar
@@ -136,7 +140,7 @@ public extension Date {
         return dateFormatter.string(from: self)
     }
     
-    func isToday(_ weekday: Weekday) -> Bool {
+    func isSameWeekday(_ weekday: Weekday) -> Bool {
         let calendar = Date.calendar
         return calendar.component(.weekday, from: self) == weekday.rawValue
     }
