@@ -59,11 +59,17 @@ Subviews management:
 [Safe subscript](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/Foundation%2BUtils/Array%2BUtils.swift#L13): Overwrites subscript to get safe access to an array index
 
   ### Date
-Date formatting
-Helper methods: isSameDay, isTomorrow, isYesterday, add hours/days, etc
+[Date formatting](https://github.com/pabloblancog/PBUtils/blob/e8ef8916cef79ae70eba9f4f54aa8179bbb9507f/PBUtils/PBUtils/Classes/Foundation%2BUtils/Date%2BUtils.swift#L12)
+
+[Helper methods](https://github.com/pabloblancog/PBUtils/blob/e8ef8916cef79ae70eba9f4f54aa8179bbb9507f/PBUtils/PBUtils/Classes/Foundation%2BUtils/Date%2BUtils.swift#L93): isSameDay, isTomorrow, isYesterday, add hours/days, etc
+
   ### LocalFiles
-Read local files (JSON files)
-  ### String
-Transformations to date
-Email validation
+[Read local files](https://github.com/pabloblancog/PBUtils/blob/e8ef8916cef79ae70eba9f4f54aa8179bbb9507f/PBUtils/PBUtils/Classes/Foundation%2BUtils/LocalFiles%2BUtils.swift#L21)
+
+[Read JSON local file](https://github.com/pabloblancog/PBUtils/blob/e8ef8916cef79ae70eba9f4f54aa8179bbb9507f/PBUtils/PBUtils/Classes/Foundation%2BUtils/LocalFiles%2BUtils.swift#L17)
+
+### String
+[Transformations to date](https://github.com/pabloblancog/PBUtils/blob/e8ef8916cef79ae70eba9f4f54aa8179bbb9507f/PBUtils/PBUtils/Classes/Foundation%2BUtils/String%2BUtils.swift#L15)
+
+[Email validation](https://github.com/pabloblancog/PBUtils/blob/e8ef8916cef79ae70eba9f4f54aa8179bbb9507f/PBUtils/PBUtils/Classes/Foundation%2BUtils/String%2BUtils.swift#L30)
   
