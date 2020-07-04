@@ -24,7 +24,7 @@ This repository includes a toolset of helper methods to include on your project.
 [Dequeue UITableViewHeaderFooterView](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/UIKit%2BUtils/UITableView%2BUtils.swift#L27)
 
 ### UINib: 
-[Load NIB file from string name](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/UIKit%2BUtils/UINib%2BUtils.swift#L12)(UIView, UIViewController, cells, etc.)
+[Load NIB file from string name (UIView, UIViewController, cells, etc.)](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/UIKit%2BUtils/UINib%2BUtils.swift#L12)
 
 ### View reusability:
 [Reuse views from default type name](https://github.com/pabloblancog/PBUtils/blob/73d013f99cff62eeb2d2c4cd8bf837e99386794e/PBUtils/PBUtils/Classes/UIKit%2BUtils/ReusableViewProtocol.swift#L11)
