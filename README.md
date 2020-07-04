@@ -1,8 +1,6 @@
-PBUtils readme.md
-
+# PBUtils
 This repository includes a toolset of helper methods to include on your project.
 
-This toolset is divided in:
 ## UIKit
   ### UIColor 
      - Hex/RGB init methods
